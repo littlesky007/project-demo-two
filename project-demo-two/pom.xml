@@ -6,6 +6,8 @@
 	<groupId>org.project.demo</groupId>
 	<artifactId>project-demo-two</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	
 	<name>project-demo-two</name>
 	<url>http://maven.apache.org</url>
 	<properties>
