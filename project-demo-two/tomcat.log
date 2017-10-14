@@ -1,0 +1,422 @@
+2017-09-29 20:07:47.862  INFO 7516 --- [main] org.project.start.App                    : Starting App on USER-20160921BG with PID 7516 (H:\corporations\project-demo-two\target\classes started by Administrator in H:\corporations\project-demo-two)
+2017-09-29 20:07:47.906  INFO 7516 --- [main] org.project.start.App                    : No active profile set, falling back to default profiles: default
+2017-09-29 20:07:48.039  INFO 7516 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7acb1363: startup date [Fri Sep 29 20:07:48 CST 2017]; root of context hierarchy
+2017-09-29 20:07:49.538  INFO 7516 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-09-29 20:07:51.250  INFO 7516 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-29 20:07:51.266  INFO 7516 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-09-29 20:07:51.268  INFO 7516 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-09-29 20:07:52.078  INFO 7516 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-09-29 20:07:52.088  INFO 7516 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-29 20:07:52.089  INFO 7516 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4050 ms
+2017-09-29 20:07:52.667  INFO 7516 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-29 20:07:52.675  INFO 7516 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-29 20:07:52.676  INFO 7516 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-29 20:07:52.677  INFO 7516 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-29 20:07:52.677  INFO 7516 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-29 20:07:52.750  WARN 7516 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logicController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.project.service.ILogicService com.project.controller.LogicController.logicServiceImpl; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.project.service.ILogicService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2017-09-29 20:07:52.756  INFO 7516 --- [main] o.apache.catalina.core.StandardService   : Stopping service Tomcat
+2017-09-29 20:07:52.776 ERROR 7516 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'logicController': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.project.service.ILogicService com.project.controller.LogicController.logicServiceImpl; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.project.service.ILogicService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839) ~[spring-context-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538) ~[spring-context-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:118) ~[spring-boot-1.3.1.RELEASE.jar:1.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:764) [spring-boot-1.3.1.RELEASE.jar:1.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.doRun(SpringApplication.java:357) [spring-boot-1.3.1.RELEASE.jar:1.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:305) [spring-boot-1.3.1.RELEASE.jar:1.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1124) [spring-boot-1.3.1.RELEASE.jar:1.3.1.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1113) [spring-boot-1.3.1.RELEASE.jar:1.3.1.RELEASE]
+	at org.project.start.App.main(App.java:11) [classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.project.service.ILogicService com.project.controller.LogicController.logicServiceImpl; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.project.service.ILogicService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.project.service.ILogicService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1373) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1119) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545) ~[spring-beans-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	... 19 common frames omitted
+
+2017-09-29 20:07:52.804  INFO 7516 --- [main] .b.l.ClasspathLoggingApplicationListener : Application failed to start with classpath: [file:/H:/corporations/project-demo-two/target/classes/, file:/C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot-starter-web/1.3.1.RELEASE/spring-boot-starter-web-1.3.1.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot-starter/1.3.1.RELEASE/spring-boot-starter-1.3.1.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot/1.3.1.RELEASE/spring-boot-1.3.1.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/1.3.1.RELEASE/spring-boot-autoconfigure-1.3.1.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot-starter-logging/1.3.1.RELEASE/spring-boot-starter-logging-1.3.1.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/ch/qos/logback/logback-classic/1.1.3/logback-classic-1.1.3.jar, file:/C:/Users/Administrator/.m2/repository/ch/qos/logback/logback-core/1.1.3/logback-core-1.1.3.jar, file:/C:/Users/Administrator/.m2/repository/org/slf4j/slf4j-api/1.7.13/slf4j-api-1.7.13.jar, file:/C:/Users/Administrator/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.13/jcl-over-slf4j-1.7.13.jar, file:/C:/Users/Administrator/.m2/repository/org/slf4j/jul-to-slf4j/1.7.13/jul-to-slf4j-1.7.13.jar, file:/C:/Users/Administrator/.m2/repository/org/slf4j/log4j-over-slf4j/1.7.13/log4j-over-slf4j-1.7.13.jar, file:/C:/Users/Administrator/.m2/repository/org/yaml/snakeyaml/1.16/snakeyaml-1.16.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/1.3.1.RELEASE/spring-boot-starter-tomcat-1.3.1.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/apache/tomcat/embed/tomcat-embed-logging-juli/8.0.30/tomcat-embed-logging-juli-8.0.30.jar, file:/C:/Users/Administrator/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/8.0.30/tomcat-embed-websocket-8.0.30.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/boot/spring-boot-starter-validation/1.3.1.RELEASE/spring-boot-starter-validation-1.3.1.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/hibernate/hibernate-validator/5.2.2.Final/hibernate-validator-5.2.2.Final.jar, file:/C:/Users/Administrator/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar, file:/C:/Users/Administrator/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar, file:/C:/Users/Administrator/.m2/repository/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar, file:/C:/Users/Administrator/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.6.4/jackson-databind-2.6.4.jar, file:/C:/Users/Administrator/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.6.4/jackson-annotations-2.6.4.jar, file:/C:/Users/Administrator/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.6.4/jackson-core-2.6.4.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/spring-beans/4.2.4.RELEASE/spring-beans-4.2.4.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/spring-context/4.2.4.RELEASE/spring-context-4.2.4.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/spring-expression/4.2.4.RELEASE/spring-expression-4.2.4.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/springframework/spring-core/4.2.4.RELEASE/spring-core-4.2.4.RELEASE.jar, file:/C:/Users/Administrator/.m2/repository/org/apache/tomcat/embed/tomcat-embed-jasper/8.0.30/tomcat-embed-jasper-8.0.30.jar, file:/C:/Users/Administrator/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/8.0.30/tomcat-embed-core-8.0.30.jar, file:/C:/Users/Administrator/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/8.0.30/tomcat-embed-el-8.0.30.jar, file:/C:/Users/Administrator/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar, file:/C:/Users/Administrator/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar]
+2017-09-29 20:08:44.465  INFO 10760 --- [main] org.project.start.App                    : Starting App on USER-20160921BG with PID 10760 (H:\corporations\project-demo-two\target\classes started by Administrator in H:\corporations\project-demo-two)
+2017-09-29 20:08:44.473  INFO 10760 --- [main] org.project.start.App                    : No active profile set, falling back to default profiles: default
+2017-09-29 20:08:44.603  INFO 10760 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3f2354e4: startup date [Fri Sep 29 20:08:44 CST 2017]; root of context hierarchy
+2017-09-29 20:08:45.970  INFO 10760 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-09-29 20:08:47.453  INFO 10760 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-29 20:08:47.468  INFO 10760 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-09-29 20:08:47.470  INFO 10760 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-09-29 20:08:48.189  INFO 10760 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-09-29 20:08:48.199  INFO 10760 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-29 20:08:48.200  INFO 10760 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3597 ms
+2017-09-29 20:08:48.696  INFO 10760 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-29 20:08:48.705  INFO 10760 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-29 20:08:48.706  INFO 10760 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-29 20:08:48.706  INFO 10760 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-29 20:08:48.706  INFO 10760 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-29 20:08:48.961  INFO 10760 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3f2354e4: startup date [Fri Sep 29 20:08:44 CST 2017]; root of context hierarchy
+2017-09-29 20:08:49.056  INFO 10760 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/getPersonByCondition],methods=[POST]}" onto public com.project.domain.Person com.project.controller.LogicController.getPersonByCondition(java.lang.String)
+2017-09-29 20:08:49.058  INFO 10760 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/persons],methods=[GET]}" onto public java.util.List<com.project.domain.Person> com.project.controller.LogicController.getAllPerson()
+2017-09-29 20:08:49.059  INFO 10760 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/getPerson/{name}],methods=[GET]}" onto public com.project.domain.Person com.project.controller.LogicController.getPerson(java.lang.String)
+2017-09-29 20:08:49.063  INFO 10760 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-29 20:08:49.064  INFO 10760 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-29 20:08:49.161  INFO 10760 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:08:49.162  INFO 10760 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:08:49.243  INFO 10760 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:08:49.551  INFO 10760 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-29 20:08:49.763  INFO 10760 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-29 20:08:49.771  INFO 10760 --- [main] org.project.start.App                    : Started App in 6.046 seconds (JVM running for 6.801)
+2017-09-29 20:09:09.116  INFO 10760 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-29 20:09:09.116  INFO 10760 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-29 20:09:09.148  INFO 10760 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 32 ms
+2017-09-29 20:09:18.739  WARN 10760 --- [http-nio-8080-exec-2] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2017-09-29 20:11:21.366  INFO 10576 --- [main] org.project.start.App                    : Starting App on USER-20160921BG with PID 10576 (H:\corporations\project-demo-two\target\classes started by Administrator in H:\corporations\project-demo-two)
+2017-09-29 20:11:21.372  INFO 10576 --- [main] org.project.start.App                    : No active profile set, falling back to default profiles: default
+2017-09-29 20:11:21.487  INFO 10576 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1adf9187: startup date [Fri Sep 29 20:11:21 CST 2017]; root of context hierarchy
+2017-09-29 20:11:23.016  INFO 10576 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-09-29 20:11:24.522  INFO 10576 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-29 20:11:24.537  INFO 10576 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-09-29 20:11:24.538  INFO 10576 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-09-29 20:11:25.278  INFO 10576 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-09-29 20:11:25.292  INFO 10576 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-29 20:11:25.292  INFO 10576 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3805 ms
+2017-09-29 20:11:25.811  INFO 10576 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-29 20:11:25.816  INFO 10576 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-29 20:11:25.816  INFO 10576 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-29 20:11:25.817  INFO 10576 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-29 20:11:25.817  INFO 10576 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-29 20:11:26.092  INFO 10576 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1adf9187: startup date [Fri Sep 29 20:11:21 CST 2017]; root of context hierarchy
+2017-09-29 20:11:26.194  INFO 10576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/getPersonByCondition],methods=[POST]}" onto public com.project.domain.Person com.project.controller.LogicController.getPersonByCondition(java.lang.String)
+2017-09-29 20:11:26.196  INFO 10576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/persons],methods=[GET]}" onto public java.util.List<com.project.domain.Person> com.project.controller.LogicController.getAllPerson()
+2017-09-29 20:11:26.196  INFO 10576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/getPerson/{name}],methods=[GET]}" onto public com.project.domain.Person com.project.controller.LogicController.getPerson(java.lang.String)
+2017-09-29 20:11:26.201  INFO 10576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-29 20:11:26.202  INFO 10576 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-29 20:11:26.302  INFO 10576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:11:26.303  INFO 10576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:11:26.384  INFO 10576 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:11:26.677  INFO 10576 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-29 20:11:26.915  INFO 10576 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-29 20:11:26.924  INFO 10576 --- [main] org.project.start.App                    : Started App in 6.171 seconds (JVM running for 6.929)
+2017-09-29 20:11:42.961  INFO 10576 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-29 20:11:42.961  INFO 10576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-29 20:11:42.987  INFO 10576 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2017-09-29 20:15:27.917  INFO 9412 --- [main] org.project.start.App                    : Starting App on USER-20160921BG with PID 9412 (H:\corporations\project-demo-two\target\classes started by Administrator in H:\corporations\project-demo-two)
+2017-09-29 20:15:27.923  INFO 9412 --- [main] org.project.start.App                    : No active profile set, falling back to default profiles: default
+2017-09-29 20:15:28.076  INFO 9412 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9a07f95: startup date [Fri Sep 29 20:15:28 CST 2017]; root of context hierarchy
+2017-09-29 20:15:29.517  INFO 9412 --- [main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2017-09-29 20:15:31.097  INFO 9412 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-09-29 20:15:31.116  INFO 9412 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-09-29 20:15:31.117  INFO 9412 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.30
+2017-09-29 20:15:31.843  INFO 9412 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2017-09-29 20:15:31.854  INFO 9412 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-09-29 20:15:31.855  INFO 9412 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3779 ms
+2017-09-29 20:15:32.430  INFO 9412 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2017-09-29 20:15:32.439  INFO 9412 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-09-29 20:15:32.440  INFO 9412 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-09-29 20:15:32.441  INFO 9412 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-09-29 20:15:32.441  INFO 9412 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'requestContextFilter' to: [/*]
+2017-09-29 20:15:32.738  INFO 9412 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@9a07f95: startup date [Fri Sep 29 20:15:28 CST 2017]; root of context hierarchy
+2017-09-29 20:15:32.851  INFO 9412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/persons],methods=[GET]}" onto public java.util.List<com.project.domain.Person> com.project.controller.LogicController.getAllPerson()
+2017-09-29 20:15:32.854  INFO 9412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/getPerson/{name}],methods=[GET]}" onto public com.project.domain.Person com.project.controller.LogicController.getPerson(java.lang.String)
+2017-09-29 20:15:32.855  INFO 9412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/logicController/getPersonByCondition],methods=[POST]}" onto public com.project.domain.Person com.project.controller.LogicController.getPersonByCondition(java.lang.String)
+2017-09-29 20:15:32.861  INFO 9412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-09-29 20:15:32.861  INFO 9412 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-09-29 20:15:32.974  INFO 9412 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:15:32.974  INFO 9412 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:15:33.055  INFO 9412 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-09-29 20:15:33.371  INFO 9412 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-09-29 20:15:33.645  INFO 9412 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-09-29 20:15:33.671  INFO 9412 --- [main] org.project.start.App                    : Started App in 6.525 seconds (JVM running for 7.309)
+2017-09-29 20:15:42.820  INFO 9412 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-09-29 20:15:42.820  INFO 9412 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-09-29 20:15:42.849  INFO 9412 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-09-29 20:16:38.382 ERROR 9412 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Could not parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly] with root cause
+
+org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.MultipartStream.readHeaders(MultipartStream.java:487) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.findNextItem(FileUploadBase.java:889) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.<init>(FileUploadBase.java:854) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:256) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:280) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2738) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3114) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1100) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:380) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:70) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2017-09-29 20:16:38.389 ERROR 9412 --- [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet dispatcherServlet threw exception
+
+org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.MultipartStream.readHeaders(MultipartStream.java:487) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.findNextItem(FileUploadBase.java:889) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.<init>(FileUploadBase.java:854) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:256) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:280) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2738) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3114) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1100) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:380) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:70) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2017-09-29 20:16:38.401 ERROR 9412 --- [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Could not parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:981) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:871) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:845) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:467) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:445) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:304) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:399) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:179) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+Caused by: org.springframework.web.multipart.MultipartException: Could not parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:111) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:85) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:76) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1089) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:928) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:969) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	... 25 common frames omitted
+Caused by: java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2811) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3114) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1100) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:380) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:70) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	... 11 common frames omitted
+Caused by: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:308) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2738) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	... 26 common frames omitted
+Caused by: org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.MultipartStream.readHeaders(MultipartStream.java:487) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.findNextItem(FileUploadBase.java:889) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.<init>(FileUploadBase.java:854) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:256) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:280) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	... 27 common frames omitted
+
+2017-09-29 20:18:17.425 ERROR 9412 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Could not parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly] with root cause
+
+org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.MultipartStream.readHeaders(MultipartStream.java:487) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.findNextItem(FileUploadBase.java:889) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.<init>(FileUploadBase.java:854) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:256) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:280) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2738) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3114) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1100) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:380) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:70) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2017-09-29 20:18:17.429 ERROR 9412 --- [http-nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet dispatcherServlet threw exception
+
+org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.MultipartStream.readHeaders(MultipartStream.java:487) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.findNextItem(FileUploadBase.java:889) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.<init>(FileUploadBase.java:854) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:256) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:280) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2738) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3114) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1100) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:380) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:70) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+
+2017-09-29 20:18:17.433 ERROR 9412 --- [http-nio-8080-exec-7] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.web.multipart.MultipartException: Could not parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:981) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:871) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:845) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:719) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:467) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:390) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:317) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:445) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:304) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:399) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:179) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [na:1.7.0_80]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [na:1.7.0_80]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_80]
+Caused by: org.springframework.web.multipart.MultipartException: Could not parse multipart servlet request; nested exception is java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.parseRequest(StandardMultipartHttpServletRequest.java:111) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.multipart.support.StandardMultipartHttpServletRequest.<init>(StandardMultipartHttpServletRequest.java:85) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.multipart.support.StandardServletMultipartResolver.resolveMultipart(StandardServletMultipartResolver.java:76) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.checkMultipart(DispatcherServlet.java:1089) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:928) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:969) ~[spring-webmvc-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	... 25 common frames omitted
+Caused by: java.io.IOException: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2811) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParameters(Request.java:3114) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.getParameter(Request.java:1100) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.RequestFacade.getParameter(RequestFacade.java:380) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:70) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:121) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141) [tomcat-embed-core-8.0.30.jar:8.0.30]
+	... 11 common frames omitted
+Caused by: org.apache.tomcat.util.http.fileupload.FileUploadException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:308) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.catalina.connector.Request.parseParts(Request.java:2738) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	... 26 common frames omitted
+Caused by: org.apache.tomcat.util.http.fileupload.MultipartStream$MalformedStreamException: Stream ended unexpectedly
+	at org.apache.tomcat.util.http.fileupload.MultipartStream.readHeaders(MultipartStream.java:487) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.findNextItem(FileUploadBase.java:889) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase$FileItemIteratorImpl.<init>(FileUploadBase.java:854) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.getItemIterator(FileUploadBase.java:256) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	at org.apache.tomcat.util.http.fileupload.FileUploadBase.parseRequest(FileUploadBase.java:280) ~[tomcat-embed-core-8.0.30.jar:8.0.30]
+	... 27 common frames omitted
+
